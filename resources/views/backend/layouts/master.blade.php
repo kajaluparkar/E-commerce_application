@@ -38,31 +38,31 @@
 
             <ul class="nav">
                 <li>
-                    <a href="">
+                    <a href="http://127.0.0.1:8000/admin/dashboard">
                         <i class="ti-panel"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="http://127.0.0.1:8000/admin/product/create">
                         <i class="ti-archive"></i>
                         <p>Add Product</p>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="http://127.0.0.1:8000/admin/product/table">
                         <i class="ti-view-list-alt"></i>
                         <p>View Products</p>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="http://127.0.0.1:8000/admin/order/table">
                         <i class="ti-calendar"></i>
                         <p>Orders</p>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="http://127.0.0.1:8000/admin/user/table">
                         <i class="fa fa-users"></i>
                         <p>Users</p>
                     </a>
@@ -102,8 +102,7 @@
             </div>
         </nav>
 
-
-        @yield('content')
+      @yield('content')
 
         <footer class="footer">
             <div class="container-fluid">
