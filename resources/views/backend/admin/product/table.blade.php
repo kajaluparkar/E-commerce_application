@@ -14,8 +14,8 @@
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">All Products</h4>
-                                <p class="category">List of all stock</p>
-                                <td><a href="{{route('admin.product.create')}}"><button class="btn btn-success">Add</button></a></td>
+                                <p class="category">List of all stock</p><br>
+                                <td><a href="{{route('admin.product.create')}}"><button class="btn btn-success ti-plus">Add</button></a></td>
                                 </div>
 
 

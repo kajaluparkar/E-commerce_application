@@ -13,10 +13,12 @@
                                             <i class="ti-eye"></i>
                                         </div>
                                     </div>
+
                                     <div class="col-xs-7">
                                         <div class="numbers">
                                             <p>Total Visitors</p>
-                                            11022
+                                            <p>{{$latest->count()}}</p>
+
                                         </div>
                                     </div>
                                 </div>
@@ -41,10 +43,11 @@
                                     <div class="col-xs-7">
                                         <div class="numbers">
                                             <p>Products</p>
-                                            $1,345
+                                            <p>{{ $data->count() }} </p>
+</p>
                                         </div>
                                     </div>
-                                </div>
+                                  </div>
                                 <div class="footer">
                                     <hr/>
                                     <div class="stats">
@@ -66,7 +69,8 @@
                                     <div class="col-xs-7">
                                         <div class="numbers">
                                             <p>Orders</p>
-                                            23
+                                            <p>{{ $task->count() }} </p>
+
                                         </div>
                                     </div>
                                 </div>
@@ -91,7 +95,8 @@
                                     <div class="col-xs-7">
                                         <div class="numbers">
                                             <p>Users</p>
-                                            45
+                                            <p>{{ $latest->count() }} </p>
+
                                         </div>
                                     </div>
                                 </div>

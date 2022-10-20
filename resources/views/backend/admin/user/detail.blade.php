@@ -8,8 +8,8 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Product Detail</h4>
-                                <p class="category">List of all stock</p>
+                                <h4 class="title">User Detail</h4>
+                                <p class="category">List of the stock</p>
                             </div>
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-striped">

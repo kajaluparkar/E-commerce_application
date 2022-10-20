@@ -2,6 +2,8 @@
 @extends('backend.layouts.master')
 @section('content')
 
+<script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
+
 <div class="content">
             <div class="container-fluid">
                 <div class="row">
@@ -51,6 +53,14 @@
                                         <button type="submit" class="btn btn-info btn-fill btn-wd">Add Product</button>
                                     </div>
                                     <div class="clearfix"></div>
+                                    <script>
+                                    ClassicEditor
+                                   .create( document.querySelector( '#description' ) )
+                                    .catch( error => {
+                                    console.error( error );
+                                        } );
+                                   </script>
+
                                 </form>
                             </div>
                         </div>

@@ -90,7 +90,7 @@ class ProductController extends Controller
 
         public function detail($id)
         {
-            
+
             $data = product::find($id);
             return view('backend.admin.product.detail',compact('data'));
         }
