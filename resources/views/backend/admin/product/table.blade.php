@@ -37,7 +37,7 @@
                                         <td>{{$d->id}}</td>
                                         <td>{{$d->name}}</td>
                                         <td>{{$d->price}}</td>
-                                        <td>{{$d->description}}</td>
+                                        <td>{!!$d->description!!}</td>
                                         <td> <img src="{{asset('uploads/'.$d->image)}}" width="50px"  height="50px"></td>
                                         <td>
                                         <a href="{{route('admin.product.edit',$d->id)}}"> <button type="button" class="btn btn-sm btn-info ti-pencil-alt"></button></a>
