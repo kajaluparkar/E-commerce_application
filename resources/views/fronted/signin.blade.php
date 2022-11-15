@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Home</title>
+    <title>Login</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -20,6 +20,8 @@
 </head>
 
 <body>
+
+<!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="#">LaravelShop</a>
@@ -39,19 +41,8 @@
                         <i class="fa fa-user"></i> Account
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-                        <!-- <a class="dropdown-item " href="">Sign In</a> -->
-                        <!-- <a class="dropdown-item" href="{{route('signup')}}">Sign Up</a> -->
-                        @if(auth()->user())
-                        <a class="dropdown-item" href="{{route('profile')}}">Profile</a>
-
-                        <a class="dropdown-item" href="{{route('logout')}}">Logout</a>
-
-                        @else
-                        <a class="dropdown-item" href="{{route('signin')}}">Sign In</a>
-
+                        <a class="dropdown-item " href="{{route('signin')}}">Sign In</a>
                         <a class="dropdown-item" href="{{route('signup')}}">Sign Up</a>
-
-                      @endif
                     </div>
                 </li>
             </ul>
@@ -59,45 +50,58 @@
     </div>
 </nav>
 
-
 <!-- Page Content -->
 <div class="container">
 
-    <!-- Jumbotron Header -->
-    <header class="jumbotron my-4">
-        <h5 class="display-3"><strong>Welcome,</strong></h5>
-        <p class="display-4"><strong>SALE UPTO 50%</strong></p>
-        <p class="display-4">&nbsp;</p>
-        <a href="#" class="btn btn-warning btn-lg float-right">SHOP NOW!</a>
-    </header>
+    <div class="row">
 
-    <!-- Page Features -->
-    <div class="row text-center">
-        @foreach($data as $d)
+        <div class="col-md-12" id="register">
 
-        <div class="col-lg-3 col-md-6 mb-4">
-            <div class="card">
-                <img class="card-img-top" src="{{asset('uploads/'.$d->image)}}" alt="" height="300px" width="250px">
+            <div class="card col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title">{{$d->name}}</h5>
-                    <p class="card-text">
-                      {!!$d->description!!}                    </p>
-                </div>
-                <div class="card-footer">
-                    <strong>{{$d->price}}</strong> &nbsp;
-                    <a href="" class="btn btn-primary btn-outline-dark"><i class="fa fa-cart-plus "></i> Add To
-                        Cart</a>
+
+                    <h2 class="card-title">Login</h2>
+
+                    <hr>
+                    <form action="{{route('signin.store')}}" method="post">
+                        @csrf
+                        {{-- @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                      @endif --}}
+
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="text" name="email" placeholder="Email" id="email" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" placeholder="Password" id="passowrd"
+                                   class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-outline-info col-md-2"> Login</button>
+                        </div>
+
+                    </form>
+
                 </div>
             </div>
+
+
         </div>
-        @endforeach
 
     </div>
-    <!-- /.row -->
 
 </div>
-<!-- /.container -->
-
 
 <!-- Bootstrap core JavaScript -->
 <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
@@ -106,6 +110,3 @@
 </body>
 
 </html>
-
-
-

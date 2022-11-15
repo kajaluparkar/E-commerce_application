@@ -5,7 +5,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\UserController;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FrontController;
 
 
 
@@ -20,15 +20,19 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+
 require __DIR__.'/auth.php';
+
+Route::get('/',[FrontController::class,'index'])->name('index');
+
 
 Route::get('admin/dashboard',[DashboardController::class,'index'])->middleware('auth');
 
@@ -51,4 +55,15 @@ Route::post('admin/profile/store/{id}',[UserController::class,'update'])->name('
 Route::get('/change-password', [App\Http\Controllers\HomeController::class, 'changePassword'])->name('change-password');
 Route::post('/change-password', [App\Http\Controllers\HomeController::class, 'updatePassword'])->name('update-password');
 
+
+Route::get('signup',[FrontController::class,'detail'])->name('signup');
+Route::post('store',[FrontController::class,'store'])->name('store');
+
+Route::get('cart',[FrontController::class,'cart'])->name('cart');
+
+Route::get('/signin',[FrontController::class,'signin'])->name('signin');
+Route::post('/signin',[FrontController::class,'signin_store'])->name('signin.store');
+
+Route::get('/profile',[FrontController::class,'profile'])->name('profile');
+Route::post('/profile/store/{id}',[FrontController::class,'profile_store'])->name('profile.store')->middleware('verified');
 

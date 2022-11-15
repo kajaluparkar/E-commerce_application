@@ -10,7 +10,9 @@ class OrderController extends Controller
 {
     public function table()
     {
-        $data = Order::paginate(3);
+
+        $data = Order::with(['user','product'])->paginate(3);
+        // dd($data);
         return view('backend.admin.order.table',compact('data'));
 
 }

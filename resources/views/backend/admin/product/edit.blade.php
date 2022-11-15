@@ -27,23 +27,23 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Product Name:</label>
-                                                <input type="text" class="form-control border-input" placeholder="" name="name" id="name">
+                                                <input type="text" class="form-control border-input" placeholder="" name="name" id="name" value="{{$data->name}}">
                                             </div>
 
                                             <div class="form-group">
                                                 <label>Product Price:</label>
-                                                <input type="text" class="form-control border-input" placeholder="" name="price" id="price">
+                                                <input type="text" class="form-control border-input" placeholder="" name="price" id="price" value="{{$data->price}}">
                                             </div>
 
                                             <div class="form-group">
                                                 <label>Product Description:</label>
                                                 <textarea cols="30" rows="10"
-                                                          class="form-control border-input" placeholder="Product Description" name="description" id="description"></textarea>
+                                                          class="form-control border-input" placeholder="Product Description" name="description" id="description" value="{{$data->description}}">{!!$data->description!!}</textarea>
                                             </div>
 
                                             <div class="form-group">
                                                 <label>Product Image:</label>
-                                                <input type="file" class="form-control border-input" name="image">
+                                                <input type="file" class="form-control border-input" name="image" >
                                             </div>
 
                                         </div>

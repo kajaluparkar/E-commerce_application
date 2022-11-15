@@ -22,12 +22,14 @@
 
                                         <tr>
                                             <th>Users</th>
-                                            <td>{{$data->user}}</td>
+                                            <td>{{$data->user->name}}</td>
                                         </tr>
 
                                         <tr>
                                             <th>Product</th>
-                                            <td>{{$data->product}}</td>
+                                            @foreach($data->product as $dp)
+                                            <td>{{$dp->name}}</td>
+                                            @endforeach
                                         </tr>
 
                                         <tr>

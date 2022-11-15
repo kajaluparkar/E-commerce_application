@@ -29,8 +29,11 @@
                                         @foreach($data as $d)
                                     <tr>
                                         <td>{{$d->id}}</td>
-                                        <td>{{$d->user}}</td>
-                                        <td>{{$d->product}}</td>
+                                        <td>{{$d->user->name}}</td>
+                                        @foreach($d->product as $dp)
+                                        <td>{{$dp->name}}</td>
+
+                                        @endforeach
                                         <td>{{$d->quantity}}</td>
                                         <td>{{$d->address}}</td>
                                         <td><span class="label label-success">Confirmed</span></td>
