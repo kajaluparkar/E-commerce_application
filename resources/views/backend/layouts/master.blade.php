@@ -125,7 +125,7 @@
                             </a>
                         </li>
                     </ul>
-                </nav>
+                </nav>                                                                      
                 <div class="copyright pull-right">
                     &copy;
                     <script>document.write(new Date().getFullYear())</script>

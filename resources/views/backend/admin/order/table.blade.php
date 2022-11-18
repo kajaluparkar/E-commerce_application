@@ -29,7 +29,7 @@
                                         @foreach($data as $d)
                                     <tr>
                                         <td>{{$d->id}}</td>
-                                        <td>{{$d->user->name}}</td>
+                                        <td>{{@$d->user->name}}</td>
                                         @foreach($d->product as $dp)
                                         <td>{{$dp->name}}</td>
 

@@ -30,7 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('cart')}}"><i class="fa fa-shopping-cart"></i> Cart <strong>({{Cart::instance('default')->count()}})</strong>
+                <a class="nav-link" href="{{route('cart')}}"><i class="fa fa-shopping-cart"></i> Cart <strong>({{Cart::instance('default')->count()}})</strong>
                     </a>
                 </li>
                 <li class="nav-item dropdown">
@@ -59,52 +59,7 @@
     </div>
 </nav>
 
-
-<!-- Page Content -->
-<div class="container">
-
-    <!-- Jumbotron Header -->
-    <header class="jumbotron my-4">
-        <h5 class="display-3"><strong>Welcome,</strong></h5>
-        <p class="display-4"><strong>SALE UPTO 50%</strong></p>
-        <p class="display-4">&nbsp;</p>
-        <a href="#" class="btn btn-warning btn-lg float-right">SHOP NOW!</a>
-    </header>
-
-    <!-- Page Features -->
-    <div class="row text-center">
-        @foreach($data as $d)
-
-        <div class="col-lg-3 col-md-6 mb-4">
-            <div class="card">
-                <img class="card-img-top" src="{{asset('uploads/'.$d->image)}}" alt="" height="300px" width="250px">
-                <div class="card-body">
-                    <h5 class="card-title">{{$d->name}}</h5>
-                    <p class="card-text">
-                      {!!$d->description!!}                    </p>
-                </div>
-                <div class="card-footer">
-                    <strong>Rs.{{$d->price}}</strong> &nbsp;
-                    <form action="{{url('cart/store')}}" method="POST">
-                        @csrf
-                    <input type="hidden" value="{{$d->id}}" name="id" />
-                    <input type="hidden" value="{{$d->name}}" name="name" />
-                    <input type="hidden" value="{{$d->price}}" name="price" />
-
-                    <button type="submit" class="btn btn-primary btn-outline-dark"><i class="fa fa-cart-plus "></i> Add To
-                        Cart</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        @endforeach
-
-    </div>
-    <!-- /.row -->
-
-</div>
-<!-- /.container -->
-
+@yield('content')
 
 <!-- Bootstrap core JavaScript -->
 <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
@@ -113,6 +68,4 @@
 </body>
 
 </html>
-
-
 

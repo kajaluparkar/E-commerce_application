@@ -67,3 +67,12 @@ Route::post('/signin',[FrontController::class,'signin_store'])->name('signin.sto
 Route::get('/profile',[FrontController::class,'profile'])->name('profile');
 Route::post('/profile/store/{id}',[FrontController::class,'profile_store'])->name('profile.store')->middleware('verified');
 
+
+Route::post('cart/store',[FrontController::class,'cart_store'])->name('cart.store');
+
+Route::get('cart/destroy',[FrontController::class,'destroy'])->name('cart.destroy');
+
+Route::get('cart/remove/{id}',[FrontController::class,'remove'])->name('cart.remove');
+
+Route::get('checkout',[FrontController::class,'checkout'])->name('checkout');
+Route::post('checkout/store/{id}',[FrontController::class,'checkout_store'])->name('checkout.store');

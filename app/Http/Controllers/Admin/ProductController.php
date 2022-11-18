@@ -38,6 +38,7 @@ class ProductController extends Controller
 
             }
         $data->Save();
+        
          return redirect()->route('admin.product.table')->with('msg' , "Data Added Successfully !");
         }
 
