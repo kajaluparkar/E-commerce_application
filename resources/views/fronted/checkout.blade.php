@@ -78,8 +78,11 @@
                         <th>Qty</th>
                     </tr>
                     @foreach($data as $d)
-                    <tr>
-                        <td><img src="{{asset('images/01.jpg')}}" alt="" style="width: 4em"></td>
+                    @php
+                        $image = \App\Models\Product::find($d->id);
+                    @endphp
+                        <tr>
+                            <td><img src="{{asset('uploads/'.$image->image)}}" style="width: 5em"></td>
                         <td>
                             <strong>{{$d->name}}</strong><br>
 

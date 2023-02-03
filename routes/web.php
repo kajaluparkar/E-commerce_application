@@ -51,13 +51,13 @@ Route::get('admin/product/detail/{id}',[ProductController::class,'detail'])->nam
 Route::get('admin/order/table',[OrderController::class,'table'])->name('admin.order.table')->middleware('auth');
 Route::get('admin/order/detail/{id}',[OrderController::class,'detail'])->name('admin.order.detail')->middleware('auth');
 
-//OrderController
+//UserController
 Route::get('admin/user/table',[UserController::class,'table'])->name('admin.user.table')->middleware('auth');
 Route::get('admin/user/detail/{id}',[UserController::class,'detail'])->name('admin.user.detail')->middleware('auth');
 Route::get('admin/profile',[UserController::class,'profile'])->name('admin.profile')->middleware('verified');
 Route::post('admin/profile/store/{id}',[UserController::class,'update'])->name('admin.profile.store')->middleware('verified');
 
-
+// HomeController
 Route::get('/change-password', [App\Http\Controllers\HomeController::class, 'changePassword'])->name('change-password');
 Route::post('/change-password', [App\Http\Controllers\HomeController::class, 'updatePassword'])->name('update-password');
 
