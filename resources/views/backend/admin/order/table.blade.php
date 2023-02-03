@@ -29,7 +29,7 @@
                                         @foreach($data as $d)
                                     <tr>
                                         <td>{{$d->id}}</td>
-                                        <td>{{@$d->user->name}}</td>
+                                        <td>{{$d->user->name}}</td>
                                         @foreach($d->product as $dp)
                                         <td>{{$dp->name}}</td>
 
@@ -47,21 +47,6 @@
                                     </tr>
                                     @endforeach
 
-                                    <!-- <tr>
-                                        <td>2</td>
-                                        <td>Dakota</td>
-                                        <td>Macbook pro</td>
-                                        <td>1</td>
-                                        <td>12/33,UK</td>
-                                        <td><span class="label label-warning">Pending</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-success ti-check"
-                                                    title="Confirm Order"></button>
-
-                                            <button class="btn btn-sm btn-primary ti-view-list-alt"
-                                                    title="Details"></button>
-                                        </td>
-                                    </tr> -->
 
                                     </tbody>
                                 </table>

@@ -14,21 +14,21 @@
         <div class="col-md-7">
             <h4>Billing Details</h4>
 
-               <form action="{{route('checkout.store',$data->id)}}" method="POST">
+               <form action="{{route('checkout.store')}}" method="POST">
                 @csrf
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="email">Email</label>
-                      <input type="email" class="form-control" id="email" placeholder="Email">
+                      <input type="email" class="form-control" id="email" placeholder="Email" name="email">
                     </div>
                     <div class="form-group col-md-6">
                       <label for="name">Name</label>
-                      <input type="text" class="form-control" id="name" placeholder="Password">
+                      <input type="text" class="form-control" id="name" placeholder="name" name="name">
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="address">Address</label>
-                    <input type="text" class="form-control" id="address" placeholder="address">
+                    <input type="text" class="form-control" id="address" placeholder="address" name="address">
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-5">

@@ -90,6 +90,7 @@
                     <input type="hidden" value="{{$d->id}}" name="id" />
                     <input type="hidden" value="{{$d->name}}" name="name" />
                     <input type="hidden" value="{{$d->price}}" name="price" />
+                    <input type="hidden" value="{{$d->image}}" name="price" />
 
                     <button type="submit" class="btn btn-primary btn-outline-dark"><i class="fa fa-cart-plus "></i> Add To
                         Cart</button>

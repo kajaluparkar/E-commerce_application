@@ -42,20 +42,6 @@
                                     </tr>
                                     @endforeach
 
-                                    <!-- <tr>
-                                        <td>2</td>
-                                        <td>Dakota</td>
-                                        <td>Macbook pro</td>
-                                        <td>12/33,UK</td>
-                                        <td><span class="label label-warning">Blocked</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-success ti-check"
-                                                    title="Active User"></button>
-
-                                            <button class="btn btn-sm btn-primary ti-view-list-alt"
-                                                    title="Details"></button>
-                                        </td>
-                                    </tr> -->
 
                                     </tbody>
                                 </table>
