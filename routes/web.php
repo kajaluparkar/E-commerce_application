@@ -79,7 +79,6 @@ Route::post('cart/store',[FrontController::class,'cart_store'])->name('cart.stor
 Route::delete('cart/destroy',[FrontController::class,'destroy'])->name('cart.destroy');
 Route::get('cart/remove/{id}',[FrontController::class,'remove'])->name('cart.remove');
 Route::get('cart/SaveForLater/{id}',[FrontController::class,'SaveForLater'])->name('cart.SaveForLater');
-
 Route::get('/cart/saveForLater/{id}', [FrontController::class, 'saveForLater'])->name('cart.saveForLater');
 Route::delete('/saveForLater/destroy/{id}', [FrontController::class, 'saveForLaterDestroy'])->name('cart.saveForLaterDestroy');
 Route::get('/cart/moveToCart/{id}', [FrontController::class, 'moveToCart'])->name('cart.moveToCart');
