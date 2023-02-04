@@ -49,6 +49,8 @@ Route::get('admin/product/detail/{id}',[ProductController::class,'detail'])->nam
 
 //OrderController
 Route::get('admin/order/table',[OrderController::class,'table'])->name('admin.order.table')->middleware('auth');
+Route::get('confirm/{id}', [OrderController::class, 'confirm'])->name('order.confirm');
+Route::get('pending/{id}', [OrderController::class, 'pending'])->name('order.pending');
 Route::get('admin/order/detail/{id}',[OrderController::class,'detail'])->name('admin.order.detail')->middleware('auth');
 
 //UserController

@@ -52,7 +52,12 @@
                                         </tr>
                                         <tr>
                                             <th>Status</th>
-                                            <td><span class="label label-success">Confirmed</span></td>
+                                          <td>  @if ($data->status)
+                                        <a href="{{ route('order.confirm', $data->id) }}"> <span class="label label-success">Confirmed</span></a>
+                                          @else
+                                        <a href="{{ route('order.pending', $data->id) }}"> <span class="label label-danger">Pending</span></a>
+                                        @endif
+                                       </td>
                                         </tr>
 
                                     </tbody>
